@@ -43,7 +43,7 @@ window.servers = {
             }
         }
 
-        logssystem.log("servers.getAvailableServers()", available_servers);
+        console.log('Logsystem >> ' + "servers.getAvailableServers()", available_servers);
         return available_servers;
     }
 

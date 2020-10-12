@@ -19,7 +19,7 @@ window.players = {
                     serverPlayers.level = prompt("Please enter level and press OK:"),
                     serverPlayers.coins = prompt("Please enter amount of coins and press OK:");
 
-                    logssystem.log(`players.rows.updateRow(${playerName}, ${serverName})`, serverPlayers);
+                    console.log('Logsystem >> ' + `players.rows.updateRow(${playerName}, ${serverName})`, serverPlayers);
                 }
                 playersData.push(serverPlayers);
             });
@@ -44,7 +44,7 @@ window.players = {
             });
         });
 
-        logssystem.log("players.fetch()", playersArray);
+        console.log('Logsystem >> ' + "players.fetch()", playersArray);
         return playersArray;
     },
 
@@ -57,7 +57,7 @@ window.players = {
             }
         });
 
-        logssystem.log("players.getActiveServerPlayers()", objectsArray);
+        console.log('Logsystem >> ' + "players.getActiveServerPlayers()", objectsArray);
         return objectsArray;
     },
 
@@ -70,7 +70,7 @@ window.players = {
             }
         });
 
-        logssystem.log("players.getBanServerPlayers()", playersArray);
+        console.log('Logsystem >> ' + "players.getBanServerPlayers()", playersArray);
         return playersArray;
     },
 
@@ -83,7 +83,7 @@ window.players = {
             }
         });
 
-        logssystem.log("players.getNegativeCoinServerPlayers()", playersArray);
+        console.log('Logsystem >> ' + "players.getNegativeCoinServerPlayers()", playersArray);
         return playersArray;
     },
 
@@ -95,7 +95,7 @@ window.players = {
             if (serverPlayers.coins < 0 && serverPlayers.login == playerName) {
                 serverPlayers.coins = 0;
 
-                logssystem.log(`players.setPlayerCoinsToZero(${playerName}, ${serverName})`, serverPlayers.coins);
+                console.log('Logsystem >> ' + `players.setPlayerCoinsToZero(${playerName}, ${serverName})`, serverPlayers.coins);
             }
 
             playersData.push(serverPlayers);
